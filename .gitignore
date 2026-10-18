@@ -1,0 +1,37 @@
+# --- Gradle / Kotlin build output ---
+.gradle/
+.kotlin/
+build/
+**/build/
+!src/**/build/
+
+# --- Local machine config (contains your SDK path) ---
+local.properties
+
+# --- IDE ---
+.idea/
+*.iml
+captures/
+.externalNativeBuild/
+.cxx/
+
+# --- Signing keys & secrets: NEVER commit these ---
+*.jks
+*.keystore
+keystore.properties
+*.p12
+*.mobileprovision
+google-services.json
+
+# --- Xcode (for later) ---
+xcuserdata/
+DerivedData/
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/contents.xcworkspacedata
+**/xcshareddata/WorkspaceSettings.xcsettings
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
