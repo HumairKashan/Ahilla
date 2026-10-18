@@ -1,4 +1,4 @@
-# Ahilla
+# Ahilla أهلّة
 
 **A calm, beautifully designed Hijri calendar for Android and iOS.**
 
