@@ -35,6 +35,15 @@ interface HijriCalendarSystem {
     /** Hijri date for the given epoch day. Throws if the day is outside [supportedYears]. */
     fun fromEpochDay(epochDay: Long): HijriDate
 
+    /**
+     * True if dates in Hijri [year] are an estimate rather than this method's own data,
+     * e.g. Umm al-Qura falling back to the tabular rule outside its published table.
+     * The UI labels such dates "approx.".
+     *
+     * It depends only on the year because every data-driven method publishes whole years.
+     */
+    fun isApproximate(year: Int): Boolean = false
+
     /** True if [date] exists in this method (in range, and day ≤ length of that month). */
     fun isValid(date: HijriDate): Boolean =
         date.year in supportedYears && date.day <= lengthOfMonth(date.year, date.month)

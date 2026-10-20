@@ -36,7 +36,9 @@ calendar-first planning + premium design and reliable widgets + privacy-first, a
 ## Date engine rules (accuracy before beauty)
 - Pure Kotlin in `commonMain`. **No platform calls, no java.time, no system clock inside the engine** — "today" is passed in.
 - Methods: **Umm al-Qura (default)** from our own embedded table, so Android and iOS always agree; **tabular/civil** as the alternative.
-- Umm al-Qura table covers **1343–1500 AH**. Outside that range the engine falls back to the tabular method, and the UI labels those dates "approx.".
+- Umm al-Qura table covers **1343–1500 AH**. Outside that range the engine falls back to the tabular method, and the UI labels those dates "approx." (`isApproximate(year)`).
+  Both seams join with no gap or overlap: UQ 1343 starts 2 Aug 1924 (day after tabular 1342 ends); tabular 1501 starts 17 Nov 2077.
+  Table source: ICU 78.3, cross-checked day by day against `java.time.chrono.HijrahDate` (androidHostTest).
 - User offset: −2…+2 days, applied after the method.
 - Manual month-start overrides (UI exposes Ramadan, Shawwal, Dhul Hijjah; engine accepts any month).
 - Conversion both ways: Hijri ⇄ Gregorian.
