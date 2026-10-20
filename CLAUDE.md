@@ -14,6 +14,7 @@ calendar-first planning + premium design and reliable widgets + privacy-first, a
 1. **Calm over crowded.** One job, done beautifully. If a feature makes the app busier, it doesn't ship.
 2. **Honest about dates.** Hijri dates differ by country. Always show which method is in use; let users match local sighting. Never claim to be "the correct" date.
 3. **For the whole ummah.** No country, sect or madhhab bias. Neutral language; users choose which observances to show.
+   Phasing: Islamic dates and events follow mainstream Sunni scholarship first; other traditions' event sets come later.
 4. **Private by design.** Offline, no account, no tracking, no analytics, no ads. Location (later, for salah times / sunset) stays on the device.
 5. **Free where it matters.** Core calendar free forever. One-time Pro unlock, no subscription, no nagging.
 6. **Glance-first.** Widgets are a headline feature, not an afterthought.
@@ -35,6 +36,7 @@ calendar-first planning + premium design and reliable widgets + privacy-first, a
 ## Date engine rules (accuracy before beauty)
 - Pure Kotlin in `commonMain`. **No platform calls, no java.time, no system clock inside the engine** — "today" is passed in.
 - Methods: **Umm al-Qura (default)** from our own embedded table, so Android and iOS always agree; **tabular/civil** as the alternative.
+- Umm al-Qura table covers **1343–1500 AH**. Outside that range the engine falls back to the tabular method, and the UI labels those dates "approx.".
 - User offset: −2…+2 days, applied after the method.
 - Manual month-start overrides (UI exposes Ramadan, Shawwal, Dhul Hijjah; engine accepts any month).
 - Conversion both ways: Hijri ⇄ Gregorian.
@@ -60,6 +62,7 @@ protect the Ramadan 1448 deadline (~Feb 2027) by cutting scope, never by skippin
 - No crescent/star iconography. Subtle geometric motif later.
 - Respect system font scaling; strong contrast; generous touch targets.
 - Advanced options one tap away, never on the main screen.
+- The day offset is worded in plain language ("Starts months 1 day later" / "1 day earlier"), never shown as +1 / −1.
 
 ## Code conventions
 - Clean, documented code: KDoc on public APIs, explain *why* for anything non-obvious (especially calendar math).
