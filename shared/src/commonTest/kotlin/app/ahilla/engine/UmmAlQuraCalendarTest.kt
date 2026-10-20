@@ -81,6 +81,8 @@ class UmmAlQuraCalendarTest {
         assertMaps(HijriDate(1342, 12, 29), GregorianDate(1924, 8, 1))
         assertMaps(HijriDate(1343, 1, 1), GregorianDate(1924, 8, 2))
         assertEquals(29, cal.lengthOfMonth(1342, 12))
+        assertTrue(cal.isValid(HijriDate(1342, 12, 29)))
+        assertTrue(cal.isApproximate(1342))
         assertFalse(cal.isValid(HijriDate(1342, 12, 30)))
     }
 
