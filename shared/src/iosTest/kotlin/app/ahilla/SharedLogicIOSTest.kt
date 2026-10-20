@@ -1,4 +1,4 @@
-package com.example.ahilla
+package app.ahilla
 
 import kotlin.test.Test
 import kotlin.test.assertEquals

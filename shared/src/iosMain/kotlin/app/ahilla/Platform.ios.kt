@@ -1,4 +1,4 @@
-package com.example.ahilla
+package app.ahilla
 
 import platform.UIKit.UIDevice
 

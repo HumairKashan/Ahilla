@@ -1,4 +1,4 @@
-package com.example.ahilla
+package app.ahilla
 
 class Greeting {
     private val platform = getPlatform()

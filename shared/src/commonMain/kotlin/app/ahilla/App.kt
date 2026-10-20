@@ -1,4 +1,4 @@
-package com.example.ahilla
+package app.ahilla
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.Image
