@@ -77,3 +77,7 @@ protect the Ramadan 1448 deadline (~Feb 2027) by cutting scope, never by skippin
 
 ## Status
 - Milestone 1 (in progress): project setup, CLAUDE.md, date engine + tests, basic month view, settings (method + offset), git.
+## Design (source of truth)
+Visual design: DESIGN.md and DESIGN-compose.md. 
+Behaviour and data: doc/TECHNICAL-DESIGN.md. 
+If code and these files disagree, stop and ask.
